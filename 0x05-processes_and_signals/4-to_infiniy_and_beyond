@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script to display the infinity and beyond "toy story quote" infinity of time
+
+while [true]; do
+    echo "To infinity and beyond"
+done
