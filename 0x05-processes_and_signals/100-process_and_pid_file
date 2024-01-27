@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# 100-process_and_pid_file script
+
+# Create /var/run/myscript.pid containing its PID
+echo $$ > /var/run/myscript.pid
+
+# Function to handle SIGTERM
+on_sigterm() {
+    echo "I hate the kill command"
+    exit_gracefully
+}
+
+# Function to handle SIGINT
+on_sigint() {
+    echo "Y U no love me?!"
+    exit_gracefully
+}
+
+# Function to handle SIGQUIT
+on_sigquit() {
+    exit_gracefully
+}
+
+# Function to cleanup and exit
+exit_gracefully() {
+    rm -f /var/run/myscript.pid
+    exit
+}
+
+# Trap signals
+trap 'on_sigterm' SIGTERM
+trap 'on_sigint' SIGINT
+trap 'on_sigquit' SIGQUIT
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
