@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+#listing the UDP | TCP running op
 
 netstat -lp
