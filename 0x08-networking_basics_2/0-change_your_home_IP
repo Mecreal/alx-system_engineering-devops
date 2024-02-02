@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Changing the host file, directing the localhost to 127.0.0.2
 
 cp /etc/hosts ~/hosts.new
 echo "127.0.0.2		localhost" > ~/hosts.new
