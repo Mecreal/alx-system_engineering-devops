@@ -1,5 +1,5 @@
 # Simple Web Infrastructure Design for www.foobar.com
-
+![The design of simple infrastructure ](https://raw.githubusercontent.com/Mecreal/alx-system_engineering-devops/main/0x09-web_infrastructure_design/server0.png)
 ## Introduction
 This document outlines the design of a simple web infrastructure for hosting the website accessible via www.foobar.com. The design involves a single server setup with several components, each fulfilling a specific role.
 
