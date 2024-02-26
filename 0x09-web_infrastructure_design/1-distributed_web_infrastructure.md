@@ -1,5 +1,6 @@
 # Distributed Web Infrastructure Design for www.foobar.com
-
+![# Distributed Web Infrastructure Design for www.foobar.com
+](https://raw.githubusercontent.com/Mecreal/alx-system_engineering-devops/main/0x09-web_infrastructure_design/server1.png)
 ## Introduction
 This document details the design of a distributed web infrastructure with three servers for hosting www.foobar.com. It outlines the roles of each component and the reasoning behind their inclusion.
 
