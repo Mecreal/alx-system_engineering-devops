@@ -5,21 +5,18 @@ import requests
 
 def top_ten(subreddit):
     """
-    Queries the Reddit API and prints the titles of the first 10 hot posts
-    listed for a given subreddit.
+    queries the Reddit API and prints the titles of the first 10 hot posts
     """
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'MyBot/0.0.1'}
-    params = {'limit': 10}
-
-    response = requests.get(url, headers=headers, params=params,
-                            allow_redirects=False)
-
-    if response.status_code == 200:
-        data = response.json()
-        posts = data['data']['children']
-        for post in posts:
-            print(post['data']['title'])
+    headers = {"User-Agent": "Frocuts"}
+    endpoint = "http://reddit.com/r/{}/hot.json?limit=10"
+    subs = r.get(endpoint.format(subreddit), headers=headers)
+    if subs.status_code != 200:
+        print(None)
+        return 0
+    subs = subs.json()
+    if subs["kind"] == "Listing":
+        for data in subs["data"]["children"]:
+            print(data["data"]["title"])
     else:
         print(None)
 
