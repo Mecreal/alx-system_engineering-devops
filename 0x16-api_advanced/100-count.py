@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Module to query Reddit API, parse titles, and count keywords."""
-import requests
-import re
 from collections import Counter
+import re
+import requests
 
 
 def count_words(subreddit, word_list, after='', word_dict=None):
