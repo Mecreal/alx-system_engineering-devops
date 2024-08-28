@@ -9,7 +9,7 @@ def top_ten(subreddit):
     """
     headers = {"User-Agent": "Frocuts"}
     endpoint = "http://reddit.com/r/{}/hot.json?limit=10"
-    subs = r.get(endpoint.format(subreddit), headers=headers)
+    subs = requests.get(endpoint.format(subreddit), headers=headers)
     if subs.status_code != 200:
         print(None)
         return 0
