@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Queries the Reddit API and returns the number of subscribers for a given subreddit.
-If the subreddit is invalid, it returns 0.
-"""
+"""Module to query the Reddit API and return the subscriber count."""
 
 
 import requests
